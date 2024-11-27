@@ -177,7 +177,33 @@ h1 {
       width: 180px; /* Adjust logo size for tablets */
   }
 
-  .contact-info, .pricing-container {
-      width: 80%; /* Make containers more flexible */
-  }
+  .contact-info {
+    width: 90%; /* Make contact info container more flexible */
+    margin-right: 0; /* Remove margin */
+    margin-bottom: 20px; /* Add space at the bottom */
+    margin-top: -150px;
+}
+
+.pricing-container {
+    width: 90%; /* Make pricing container flexible */
+    margin-top: 20px;
+}
+}
+
+@media screen and (max-width: 480px) {
+  .logo {
+    width: 180px; /* Adjust logo size for tablets */
+}
+
+.contact-info {
+  width: 90%; /* Make contact info container more flexible */
+  margin-right: 0; /* Remove margin */
+  margin-bottom: 20px; /* Add space at the bottom */
+  margin-top: 100px;
+}
+
+.pricing-container {
+  width: 90%; /* Make pricing container flexible */
+  margin-top: 20px;
+}
 }
