@@ -139,11 +139,13 @@ button:hover .button-text {
 
   .logo {
     width: 150px; /* Reduce logo size on mobile */
+    margin-bottom: 30px;
   }
 
   h1 {
     font-size: 30px; /* Reduce font size of h1 */
     margin-bottom: 30px;
+    margin-top: 0px;
   }
 
   .button-container {
@@ -171,6 +173,7 @@ button:hover .button-text {
   h1 {
     font-size: 40px; /* Adjust font size for tablets */
     margin-bottom: 50px;
+    margin-top: 200px;
   }
 
   .button-container {
@@ -184,4 +187,30 @@ button:hover .button-text {
   button img {
     width: 180px; /* Adjust image size for tablets */
   }
+}
+
+@media screen and (max-width: 380px) {
+
+  .logo {
+    width: 180px; /* Adjust logo size for tablets */
+  }
+
+  h1 {
+    font-size: 40px; /* Adjust font size for tablets */
+    margin-bottom: 50px;
+    margin-top: 350px;
+  }
+
+  .button-container {
+    justify-content: center;
+  }
+
+  .button-wrapper {
+    margin: 20px; /* Adjust button spacing */
+  }
+
+  button img {
+    width: 180px; /* Adjust image size for tablets */
+  }
+
 }
