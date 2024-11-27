@@ -123,10 +123,11 @@ header {
 
     .logo {
         width: 150px;
+        margin-bottom: 0px;
     }
 
     .paintings-container {
-        margin-top: 100px; /* Reduce top margin */
+        margin-top: 0px; /* Reduce top margin */
     }
 
     .paintings-gallery {
@@ -147,18 +148,50 @@ header {
     }
 }
 
-@media (max-width: 480px) {
+@media screen and (max-width: 1024px) {
     header {
-        top: 5px;
+        top: 10px;
         left: 10px;
     }
 
     .logo {
-        width: 120px; /* Reduce logo size for smaller screens */
+        width: 150px; /* Reduce logo size for smaller screens */
     }
 
     .paintings-container {
-        margin-top: 80px; /* Even smaller top margin */
+        margin-top: -250px; /* Even smaller top margin */
+    }
+
+    .paintings-gallery {
+        gap: 15px;
+    }
+
+    .painting {
+        width: 100%;
+        margin-top: 15px; /* Further reduced space */
+    }
+
+    .painting-img {
+        height: 200px; /* Even smaller image height */
+    }
+
+    .painting-info {
+        font-size: 16px; /* Smaller text on smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        top: 10px;
+        left: 10px;
+    }
+
+    .logo {
+        width: 150px; /* Reduce logo size for smaller screens */
+    }
+
+    .paintings-container {
+        margin-top: -20px; /* Even smaller top margin */
     }
 
     .paintings-gallery {
