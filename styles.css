@@ -1,0 +1,137 @@
+@font-face {
+  font-family: 'handwritten';
+  src: url('fonts/handwritten.ttf') format('truetype'),
+       url('fonts/handwritten.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'handwritten'; /* Apply custom font only */
+  background-color: #f1e6d4;
+  background-image: url('assets/images/background.png'); /* Set background image */
+  background-size: cover; /* Ensure the background image covers the entire screen */
+  background-position: center; /* Center the background image */
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+header {
+  position: absolute;
+  top: 10px; /* Set space between the logo and the top of the website */
+  left: 25px;
+}
+
+.logo-container {
+  position: relative;
+}
+
+.logo {
+  width: 200px; /* Logo image size */
+}
+
+.logo-text {
+  display: none; /* Initially hide the text */
+  font-size: 30px;
+  color: rgb(0, 0, 0);
+  font-weight: lighter;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  text-align: center;
+  width: 100%;
+}
+
+.logo-container:hover .logo {
+  opacity: 0; /* Hide the logo image when hovering */
+}
+
+.logo-container:hover .logo-text {
+  display: block; /* Show the text when hovering */
+  opacity: 0.5;
+}
+
+.centered-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+.content {
+  text-align: center; /* Center text inside this div */
+}
+
+h1 {
+  font-family: 'handwritten'; /* Custom handwritten font */
+  font-size: 50px; /* Set font size */
+  color: black;
+  font-weight: lighter; /* Make it bold */
+  text-align: center; /* Center the text */
+  margin-bottom: 75px;
+  /*background-image: linear-gradient(45deg, #444444, #242424, #2e2e2e, #414141); /* White gradient */
+  background-clip: text; /* Clip the background to text */
+  -webkit-background-clip: text; /* Ensure the background clip works in WebKit browsers */
+  letter-spacing: 5px; /* Increase space between letters */
+  /*text-shadow: 
+    0 0 5px rgba(255, 255, 255, 0.8), 
+    0 0 10px rgba(255, 255, 255, 0.6), 
+    0 0 20px rgba(255, 255, 255, 0.4), 
+    0 0 30px rgba(255, 255, 255, 0.2), 
+    0 0 40px rgba(255, 255, 255, 0.1); /* Glowing effect */
+  position: relative; /* Ensure the letters are positioned relative to the container */
+  /*-webkit-text-stroke: 0.1px black; /* Outline for webkit browsers */
+}
+
+.button-container {
+  display: flex;
+  justify-content: center; /* Center buttons horizontally */
+}
+
+.button-wrapper {
+  display: flex;
+  flex-direction: column; /* Stack the image and text vertically */
+  align-items: center; /* Center them horizontally */
+  margin: 0 50px; /* Add space of 200px between buttons (100px on each side) */
+}
+
+button {
+  background-color: transparent; /* Remove default button background */
+  border: none; /* Remove default button border */
+  padding: 0; /* Remove padding */
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition for scaling effect */
+}
+
+button img {
+  width: 200px; /* Set image size to 200px */
+  object-fit: cover; /* Ensure the image covers the button area */
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition for image size and opacity */
+}
+
+/* Hover effect for all buttons except the second one */
+button:hover img {
+  opacity: 0.7; /* Slightly fade the image on hover */
+  transform: scale(1.1) rotate(10deg); /* Slightly enlarge and rotate the image to the right when hovered */
+}
+
+button:hover .button-text {
+  opacity: 0.7; /* Slightly fade the text on hover */
+  transform: scale(1.1); /* Slightly enlarge the text when hovered */
+  font-size: 60px; /* Slightly enlarge the text when hovered */
+}
+
+/* Hover effect for the second button (tilt to the left) */
+.button-wrapper:nth-child(2) button:hover img {
+  opacity: 0.7; /* Slightly fade the image on hover */
+  transform: scale(1.1) rotate(-10deg); /* Slightly enlarge and rotate the image to the left when hovered */
+}
+
+.button-wrapper:nth-child(2) button:hover .button-text {
+  opacity: 0.7; /* Slightly fade the text on hover */
+  transform: scale(1.1); /* Slightly enlarge the text when hovered */
+  font-size: 60px; /* Slightly enlarge the text when hovered */
+}
