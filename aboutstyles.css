@@ -9,20 +9,20 @@
 body {
     font-family: 'handwritten'; /* Apply custom font only */
     background-color: #f1e6d4;
-    background-image: url('assets/images/background.png'); /* Set background image */
-    background-size: cover; /* Ensure the background image covers the entire screen */
-    background-position: center; /* Center the background image */
+    background-image: url('assets/images/background.png');
+    background-size: cover;
+    background-position: center;
     margin: 0;
     padding: 0;
     height: 100vh;
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
+    justify-content: center;
+    align-items: center;
 }
 
 header {
     position: absolute;
-    top: 10px; /* Set space between the logo and the top of the website */
+    top: 10px;
     left: 25px;
 }
 
@@ -58,48 +58,52 @@ header {
 /* About page content */
 .about-container {
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
+    justify-content: center;
+    align-items: center;
     width: 80%; /* Set the container width */
     height: 80vh; /* Set the container height */
+    flex-direction: row;
+    flex-wrap: wrap; /* Allow wrapping for mobile devices */
 }
 
 .about-content {
     display: flex;
-    align-items: center; /* Align image and text vertically */
-    justify-content: center; /* Align image and text horizontally */
-    text-align: center; /* Center the text */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .about-image {
-    margin-right: 30px; /* Add some space between the image and text */
+    margin-right: 30px;
+    margin-bottom: 20px;
 }
 
 .about-image img {
     width: 250px; /* Set the image size */
     height: auto;
-    border-radius: 10px; /* Round the image corners */
+    border-radius: 10px;
 }
 
 .about-text {
-    background-color: white; /* White background for the text box */
-    padding: 30px; /* Add padding around the text */
-    border-radius: 15px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
-    width: 300px; /* Set the text box width */
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
 }
 
 .about-text h1 {
-    font-family: 'handwritten'; /* Custom handwritten font */
-    font-size: 40px; /* Set font size */
+    font-family: 'handwritten';
+    font-size: 40px;
     color: black;
-    font-weight: lighter; /* Make it bold */
-    text-align: center; /* Center the text */
+    font-weight: lighter;
+    text-align: center;
     margin-bottom: 5px;
-    /*background-image: linear-gradient(45deg, #444444, #242424, #2e2e2e, #414141); /* White gradient */
-    background-clip: text; /* Clip the background to text */
-    -webkit-background-clip: text; /* Ensure the background clip works in WebKit browsers */
-    letter-spacing: 5px; /* Increase space between letters */
+    background-clip: text;
+    -webkit-background-clip: text;
+    letter-spacing: 5px;
 }
 
 .about-text p {
@@ -107,4 +111,69 @@ header {
     font-size: 24px;
     color: black;
     margin-right: 0px;
+}
+
+/* Mobile and Tablet Optimizations */
+@media (max-width: 768px) {
+    .about-container {
+        width: 95%; /* Slightly reduce container width on smaller screens */
+        height: auto; /* Let the height adjust to content */
+    }
+
+    .about-image {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .about-image img {
+        width: 200px; /* Reduce image size */
+    }
+
+    .about-text {
+        width: 280px; /* Adjust text box width */
+        padding: 20px; /* Reduce padding */
+    }
+
+    .about-text h1 {
+        font-size: 35px; /* Smaller header font size */
+        letter-spacing: 4px; /* Adjust letter spacing */
+    }
+
+    .about-text p {
+        font-size: 22px; /* Adjust paragraph font size */
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px; /* Add some padding to prevent edges being too close */
+    }
+
+    .about-container {
+        flex-direction: column; /* Stack the content vertically */
+        width: 100%; /* Full width on very small screens */
+        height: auto; /* Let content take the full height */
+    }
+
+    .about-content {
+        flex-direction: column; /* Stack the image and text */
+        align-items: center; /* Center-align content */
+    }
+
+    .about-image img {
+        width: 180px; /* Reduce the image size further */
+    }
+
+    .about-text {
+        width: 100%; /* Make the text container full-width */
+        padding: 15px; /* Reduce padding */
+    }
+
+    .about-text h1 {
+        font-size: 28px; /* Further reduce header font size */
+    }
+
+    .about-text p {
+        font-size: 18px; /* Smaller text for mobile screens */
+    }
 }
