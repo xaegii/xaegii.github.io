@@ -1,26 +1,27 @@
 /* Define the custom handwritten font */
 @font-face {
-    font-family: 'handwritten'; /* Font name */
+    font-family: 'handwritten';
     src: url('fonts/handwritten.ttf') format('truetype'),
-         url('fonts/handwritten.otf') format('opentype'); /* Path to the font files */
+         url('fonts/handwritten.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
 
 /* Apply the handwritten font globally to all text */
 body {
-    font-family: 'handwritten', sans-serif; /* Apply handwritten font to all text */
+    font-family: 'handwritten', sans-serif;
     background-color: #f1e6d4;
-    background-image: url('assets/images/background.png'); /* Set background image */
-    background-size: cover; /* Ensure the background image covers the entire screen */
-    background-position: center; /* Center the background image */
+    background-image: url('assets/images/background.png');
+    background-size: cover;
+    background-position: center;
     margin: 0;
     padding: 0;
     height: 100vh;
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: flex-start; /* Align from the top */
-    flex-direction: column; /* Stack elements vertically */
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    box-sizing: border-box;
 }
 
 /* Header and logo styles */
@@ -28,6 +29,7 @@ header {
     position: absolute;
     top: 10px;
     left: 25px;
+    z-index: 100;
 }
 
 .logo-container {
@@ -35,7 +37,7 @@ header {
 }
 
 .logo {
-    width: 200px; /* Logo image size */
+    width: 200px;
 }
 
 .logo-text {
@@ -51,17 +53,17 @@ header {
 }
 
 .logo-container:hover .logo {
-    opacity: 0; /* Hide the logo image when hovering */
+    opacity: 0;
 }
 
 .logo-container:hover .logo-text {
-    display: block; /* Show the text when hovering */
+    display: block;
     opacity: 0.5;
 }
 
 /* Container for the paintings */
 .paintings-container {
-    margin-top: 300px; /* Space between the bottom of the logo and the paintings */
+    margin-top: 300px;
     width: 100%;
     padding: 0 25px;
 }
@@ -70,20 +72,22 @@ header {
 .paintings-gallery {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start; /* Align the images to the left */
+    justify-content: flex-start;
     gap: 30px;
-    margin-top: 20px; /* Space between the logo and the first row of paintings */
+    margin-top: 20px;
 }
 
 /* Individual painting styles */
 .painting {
     position: relative;
-    width: 300px; /* Fixed size for each painting */
+    width: 300px;
     text-align: left;
-    margin-top: 30px; /* Margin between the top of the image and the painting */
+    margin-top: 30px;
     margin-bottom: 5px;
+    flex: 1 1 calc(33% - 30px); /* For responsive grid */
 }
 
+/* Painting image styles */
 .painting-img {
     width: 100%;
     height: 300px;
@@ -91,11 +95,10 @@ header {
     transition: opacity 0.3s ease;
 }
 
-/* Information text for each painting */
 .painting-info {
     font-size: 20px;
     color: #333;
-    margin-top: 10px; /* Space between the bottom of the image and the text */
+    margin-top: 10px;
 }
 
 .painting-info p {
@@ -108,5 +111,70 @@ header {
 
 /* Margin between rows of paintings */
 .painting + .painting {
-    margin-top: 30px; /* Space between the bottom of the text and the next row of paintings */
+    margin-top: 30px;
+}
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+    header {
+        top: 5px;
+        left: 15px;
+    }
+
+    .logo {
+        width: 150px;
+    }
+
+    .paintings-container {
+        margin-top: 100px; /* Reduce top margin */
+    }
+
+    .paintings-gallery {
+        gap: 20px;
+    }
+
+    .painting {
+        width: 100%;
+        margin-top: 20px; /* Reduced space between paintings */
+    }
+
+    .painting-img {
+        height: 250px; /* Adjust image size */
+    }
+
+    .painting-info {
+        font-size: 18px; /* Reduce font size for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        top: 5px;
+        left: 10px;
+    }
+
+    .logo {
+        width: 120px; /* Reduce logo size for smaller screens */
+    }
+
+    .paintings-container {
+        margin-top: 80px; /* Even smaller top margin */
+    }
+
+    .paintings-gallery {
+        gap: 15px;
+    }
+
+    .painting {
+        width: 100%;
+        margin-top: 15px; /* Further reduced space */
+    }
+
+    .painting-img {
+        height: 200px; /* Even smaller image height */
+    }
+
+    .painting-info {
+        font-size: 16px; /* Smaller text on smaller screens */
+    }
 }
