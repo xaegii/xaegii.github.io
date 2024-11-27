@@ -59,6 +59,7 @@ header {
   display: flex;
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
+  text-align: center;
 }
 
 .content {
@@ -72,30 +73,23 @@ h1 {
   font-weight: lighter; /* Make it bold */
   text-align: center; /* Center the text */
   margin-bottom: 75px;
-  /*background-image: linear-gradient(45deg, #444444, #242424, #2e2e2e, #414141); /* White gradient */
   background-clip: text; /* Clip the background to text */
   -webkit-background-clip: text; /* Ensure the background clip works in WebKit browsers */
   letter-spacing: 5px; /* Increase space between letters */
-  /*text-shadow: 
-    0 0 5px rgba(255, 255, 255, 0.8), 
-    0 0 10px rgba(255, 255, 255, 0.6), 
-    0 0 20px rgba(255, 255, 255, 0.4), 
-    0 0 30px rgba(255, 255, 255, 0.2), 
-    0 0 40px rgba(255, 255, 255, 0.1); /* Glowing effect */
-  position: relative; /* Ensure the letters are positioned relative to the container */
-  /*-webkit-text-stroke: 0.1px black; /* Outline for webkit browsers */
+  position: relative;
 }
 
 .button-container {
   display: flex;
   justify-content: center; /* Center buttons horizontally */
+  flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
 }
 
 .button-wrapper {
   display: flex;
   flex-direction: column; /* Stack the image and text vertically */
   align-items: center; /* Center them horizontally */
-  margin: 0 50px; /* Add space of 200px between buttons (100px on each side) */
+  margin: 0 50px; /* Add space of 50px between buttons (adjustable for mobile) */
 }
 
 button {
@@ -134,4 +128,60 @@ button:hover .button-text {
   opacity: 0.7; /* Slightly fade the text on hover */
   transform: scale(1.1); /* Slightly enlarge the text when hovered */
   font-size: 60px; /* Slightly enlarge the text when hovered */
+}
+
+/* Mobile Optimization */
+@media screen and (max-width: 768px) {
+  header {
+    left: 10px;
+    top: 10px;
+  }
+
+  .logo {
+    width: 150px; /* Reduce logo size on mobile */
+  }
+
+  h1 {
+    font-size: 30px; /* Reduce font size of h1 */
+    margin-bottom: 30px;
+  }
+
+  .button-container {
+    flex-direction: column; /* Stack the buttons vertically */
+    justify-content: center;
+    align-items: center; /* Center buttons */
+    margin-top: 20px;
+  }
+
+  .button-wrapper {
+    margin: 20px 0; /* Adjust spacing between buttons */
+  }
+
+  button img {
+    width: 150px; /* Reduce image size for mobile */
+  }
+}
+
+/* Tablet Optimization */
+@media screen and (max-width: 1024px) {
+  .logo {
+    width: 180px; /* Adjust logo size for tablets */
+  }
+
+  h1 {
+    font-size: 40px; /* Adjust font size for tablets */
+    margin-bottom: 50px;
+  }
+
+  .button-container {
+    justify-content: center;
+  }
+
+  .button-wrapper {
+    margin: 20px; /* Adjust button spacing */
+  }
+
+  button img {
+    width: 180px; /* Adjust image size for tablets */
+  }
 }
