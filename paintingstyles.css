@@ -127,7 +127,7 @@ header {
     }
 
     .paintings-container {
-        margin-top: 0px; /* Reduce top margin */
+        margin-top: 50px; /* Reduce top margin */
     }
 
     .paintings-gallery {
@@ -159,7 +159,7 @@ header {
     }
 
     .paintings-container {
-        margin-top: -250px; /* Even smaller top margin */
+        margin-top: 50px; /* Even smaller top margin */
     }
 
     .paintings-gallery {
@@ -191,7 +191,7 @@ header {
     }
 
     .paintings-container {
-        margin-top: -20px; /* Even smaller top margin */
+        margin-top: 50px; /* Even smaller top margin */
     }
 
     .paintings-gallery {
