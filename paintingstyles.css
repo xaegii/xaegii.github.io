@@ -123,11 +123,11 @@ header {
 
     .logo {
         width: 150px;
-        margin-bottom: 0px;
+        margin-bottom: 50px;
     }
 
     .paintings-container {
-        margin-top: 100px; /* Reduce top margin */
+        margin-top: 300px; /* Reduce top margin */
     }
 
     .paintings-gallery {
@@ -156,10 +156,11 @@ header {
 
     .logo {
         width: 150px; /* Reduce logo size for smaller screens */
+     margin-bottom: 50px;
     }
 
     .paintings-container {
-        margin-top: 100px; /* Even smaller top margin */
+        margin-top: 300px; /* Even smaller top margin */
     }
 
     .paintings-gallery {
@@ -188,6 +189,7 @@ header {
 
     .logo {
         width: 150px; /* Reduce logo size for smaller screens */
+    margin-bottom: 50px;
     }
 
     .paintings-container {
