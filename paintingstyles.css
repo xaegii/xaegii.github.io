@@ -16,9 +16,9 @@ body {
     background-position: center;
     margin: 0;
     padding: 0;
-    height: 100vh;
+    height: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
     box-sizing: border-box;
@@ -26,10 +26,11 @@ body {
 
 /* Header and logo styles */
 header {
-    position: absolute;
+    position: fixed;
     top: 10px;
     left: 25px;
     z-index: 100;
+    padding-bottom: 20px; /* Ensures space below the logo */
 }
 
 .logo-container {
@@ -38,6 +39,7 @@ header {
 
 .logo {
     width: 200px;
+    transition: opacity 0.3s ease;
 }
 
 .logo-text {
@@ -63,7 +65,7 @@ header {
 
 /* Container for the paintings */
 .paintings-container {
-    margin-top: 300px;
+    margin-top: 180px; /* Increased top margin to add more space between the logo and paintings */
     width: 100%;
     padding: 0 25px;
 }
@@ -72,7 +74,7 @@ header {
 .paintings-gallery {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: space-between;
     gap: 30px;
     margin-top: 20px;
 }
@@ -80,11 +82,12 @@ header {
 /* Individual painting styles */
 .painting {
     position: relative;
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
     text-align: left;
     margin-top: 30px;
     margin-bottom: 5px;
-    flex: 1 1 calc(33% - 30px); /* For responsive grid */
+    flex-grow: 1;
 }
 
 /* Painting image styles */
@@ -123,28 +126,27 @@ header {
 
     .logo {
         width: 150px;
-        margin-bottom: 50px;
     }
 
     .paintings-container {
-        margin-top: 300px; /* Reduce top margin */
+        margin-top: 150px; /* Adjust top margin */
     }
 
     .paintings-gallery {
-        gap: 20px;
+        gap: 15px;
     }
 
     .painting {
         width: 100%;
-        margin-top: 20px; /* Reduced space between paintings */
+        margin-top: 20px;
     }
 
     .painting-img {
-        height: 250px; /* Adjust image size */
+        height: 250px;
     }
 
     .painting-info {
-        font-size: 18px; /* Reduce font size for mobile */
+        font-size: 18px;
     }
 }
 
@@ -155,12 +157,11 @@ header {
     }
 
     .logo {
-        width: 150px; /* Reduce logo size for smaller screens */
-     margin-bottom: 50px;
+        width: 150px;
     }
 
     .paintings-container {
-        margin-top: 300px; /* Even smaller top margin */
+        margin-top: 150px;
     }
 
     .paintings-gallery {
@@ -169,15 +170,15 @@ header {
 
     .painting {
         width: 100%;
-        margin-top: 15px; /* Further reduced space */
+        margin-top: 15px;
     }
 
     .painting-img {
-        height: 200px; /* Even smaller image height */
+        height: 220px;
     }
 
     .painting-info {
-        font-size: 16px; /* Smaller text on smaller screens */
+        font-size: 16px;
     }
 }
 
@@ -188,28 +189,27 @@ header {
     }
 
     .logo {
-        width: 150px; /* Reduce logo size for smaller screens */
-    margin-bottom: 50px;
+        width: 120px;
     }
 
     .paintings-container {
-        margin-top: 300px; /* Even smaller top margin */
+        margin-top: 50px;
     }
 
     .paintings-gallery {
-        gap: 15px;
+        gap: 10px;
     }
 
     .painting {
         width: 100%;
-        margin-top: 15px; /* Further reduced space */
+        margin-top: 15px;
     }
 
     .painting-img {
-        height: 200px; /* Even smaller image height */
+        height: 180px;
     }
 
     .painting-info {
-        font-size: 16px; /* Smaller text on smaller screens */
+        font-size: 14px;
     }
 }
